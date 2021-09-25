@@ -1,0 +1,203 @@
+/* Start General Styles */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 200px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+:root {
+    --my-main: rgb(118, 118, 118);
+    --my-a-color: white;
+    --my-color-hover: #bdc76c;
+}
+
+/* End General Styles */
+
+/* Home Page Starts here */
+.header-img {
+    position: relative;
+    height: 500px;
+    background-image: url("../images/bg-head.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
+.header-img::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(50, 55, 104, 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.header-text {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+/* Home Page Ends here */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Products Page */
+
+.products-content {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.products-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+
+.products-content:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.background-products-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(32, 32, 32);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.background-products-desc:hover {
+    opacity: 1;
+}
+
+.products-desc {
+    position: absolute;
+    color: var(--my-a-color);
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.products-content .products-desc h1 a {
+    color: var(--my-a-color);
+    /*text-transform: uppercase;*/
+}
+
+.products-content .products-desc h1 a:hover {
+    color: var(--my-color-hover);
+    transition: color 0.3s;
+}
+
+.products-content .products-desc p {
+    color: var(--my-main)
+}
+
+.background-products-desc .products-desc > a {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.background-products-desc .products-desc > a:hover {
+    color: var(--my-color-hover);
+    transition: color 0.3s;
+}
+
+.background-products-desc .products-desc > a svg {
+    width: 20px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.background-products-desc .products-desc > a:hover svg {
+    transform: translateX(10px);
+}
+
+
+/* ///////////////////////////// */
+
+.products-desc span {
+    position: absolute;
+    background-color: lightgray;
+    transition: all 0.2s;
+
+}
+
+.products-desc .span-top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+}
+
+.products-desc:hover .span-top {
+    transition-delay: 0.2s;
+    width: 100%;
+}
+
+/* ///////////////////////////// */
+.products-desc .span-right {
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+}
+
+.products-desc:hover .span-right {
+    transition-delay: 0.4s;
+    height: 100%;
+}
+
+/* ///////////////////////////// */
+.products-desc .span-bottom {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+}
+
+.products-desc:hover .span-bottom {
+    transition-delay: 0.6s;
+    width: 100%;
+}
+
+/* ///////////////////////////// */
+.products-desc .span-left {
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+}
+
+.products-desc:hover .span-left {
+    transition-delay: .8s;
+    height: 100%;
+}
