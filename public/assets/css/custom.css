@@ -4,9 +4,14 @@ body {
 
 /* Start Navbar */
 .header-navbar .navbar-dark .navbar-nav .nav-link {
-    color: var(--bs-danger);
+    color: var(--my-a-color);
     position: relative;
 }
+.header-navbar .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--my-color-hover);
+    transition-duration: .3s;
+}
+
 .header-navbar .navbar-dark .navbar-nav .nav-link::before,
 .header-navbar .navbar-dark .navbar-nav .nav-link::after {
     content: '';
@@ -18,14 +23,17 @@ body {
     opacity: 0;
     transition: transform .3s, opacity .2s;
 }
+
 .header-navbar .navbar-dark .navbar-nav .nav-link::before {
     top: 0;
     transform: translateY(-10px);
 }
+
 .header-navbar .navbar-dark .navbar-nav .nav-link::after {
     bottom: 0;
     transform: translateY(10px);
 }
+
 .header-navbar .navbar-dark .navbar-nav .nav-link:hover::before,
 .header-navbar .navbar-dark .navbar-nav .nav-link:hover::after {
     transform: translateY(0);
@@ -38,34 +46,111 @@ body {
 footer a:hover {
     color: white;
 }
+
 .fa-instagram:hover {
-    background :linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-twitter:hover {
-    background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
+    background: linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-facebook-f:hover {
-    background:linear-gradient(120deg, #3b5998, #FFFFFF);
+    background: linear-gradient(120deg, #3b5998, #FFFFFF);
     height: 20px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-youtube:hover {
-    background:linear-gradient(120deg, #ff0000, #282828);
+    background: linear-gradient(120deg, #ff0000, #282828);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-envelope:hover {
-    background:linear-gradient(120deg, #dd4b39, #FFFFFF);
+    background: linear-gradient(120deg, #dd4b39, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 /* End Footer */
 
+/* Start Store Page */
+section.second-header {
+    background-color: rgba(102,102,102,1);
+}
+section.second-header h3 {
+    color: var(--my-a-color);
+}
+.breadcrumb-item a:hover {
+    color: var(--my-color-hover);
+    transition-duration: .3s;
+}
+.category-store a {
+    position: relative;
+    transition: color .3s;
+}
+
+.category-store a:hover {
+    color: var(--my-color-hover);
+}
+
+.category-store a:hover p {
+    opacity: 1;
+    transition-duration: .3s;
+}
+
+.category-store a:hover img {
+    filter: blur(8px);
+    transition-duration: .3s;
+}
+
+.category-store a p {
+    position: absolute;
+    top: 45%;
+    transform: translateX(50%);
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* End Store Page */
+.products-content .products-desc .product-price {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: var(--bs-danger);
+}
+
+.may-likes-items a:hover {
+    color: var(--my-color-hover);
+    transition-duration: .3s;
+}
+.cart-count-component a:hover {
+    color: var(--my-color-hover);
+    transition-duration: .3s;
+}
+.cart-items select[name=product-qty] {
+    background-color: var(--my-color-hover);
+    color: var(--my-a-color);
+}
+strong, small {
+    color: var(--my-a-color);
+}
+
+.continue-shopping {
+    color: var(--my-color-hover);
+}
+.continue-shopping:hover {
+    color: var(--bs-warning);
+}
+.products-desc p a {
+    color: var(--bs-secondary);
+}
 @media (max-width: 768px) {
     .navbar .navbar-brand img {
         width: 160px;

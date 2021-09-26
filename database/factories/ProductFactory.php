@@ -28,7 +28,7 @@ class ProductFactory extends Factory
         return [
             'name'  => $name,
             'slug'  => $slug,
-            'desc'  => $this->faker->text(350),
+            'desc'  => $this->faker->text(100),
             'image' => "assets/images/products/$name.png",
             'price' => $this->faker->numberBetween(20, 60),
             'stock_status'  => $this->faker->randomElement(['instock', 'outstock']),

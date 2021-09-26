@@ -23,11 +23,15 @@ a {
     text-decoration: none;
     color: white;
 }
+a:hover {
+    color: var(--my-color-hover);
+    transition-duration: .3s;
+}
 
 :root {
     --my-main: rgb(118, 118, 118);
     --my-a-color: white;
-    --my-color-hover: #bdc76c;
+    --my-color-hover: #C9553D; /* #bdc76c */
 }
 
 /* End General Styles */
@@ -66,7 +70,7 @@ a {
 
 .products-content {
     position: relative;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -200,4 +204,20 @@ a {
 .products-desc:hover .span-left {
     transition-delay: .8s;
     height: 100%;
+}
+
+.info-small{
+    font-size: 14px;
+}
+
+
+.info-micro{
+    font-size: 10px;
+}
+.info-microX2{
+    font-size: 12px;
+}
+
+.brown{
+    color:var(--my-color-hover);
 }

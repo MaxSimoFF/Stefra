@@ -34,7 +34,9 @@
                     </div>
                     <div class="col-6 m-auto">
                         <div class='ms-5'>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <!-- align-middle -->
@@ -47,7 +49,7 @@
                                         <a class="fs-4 nav-link" href="#">Products</a>
                                     </li>
                                     <li class="nav-item me-5">
-                                        <a class="fs-4 nav-link" href="#">Contact</a>
+                                        <a class="fs-4 nav-link" href="{{ route('contact') }}">Contact</a>
                                     </li>
                                     <li class="nav-item me-5">
                                         <a class="fs-4 nav-link" href="{{ route('store') }}">Store</a>
@@ -61,7 +63,7 @@
         </nav>
         <!-- nav bar ends here -->
     </header>
-<!-- Page Content -->
+    <!-- Page Content -->
     <main>
         {{ $slot }}
     </main>
@@ -76,9 +78,9 @@
                 <div class="col-6 m-auto text-center">
                     <a href="#"><i class='me-3 fab fa-facebook-f fa-lg'></i></a>
                     <a href="#"><i class="me-3 fab fa-youtube fa-lg"></i><a href="#">
-                    <a href="#"><i class="me-3 fab fa-instagram fa-lg"></i><a href="#">
-                    <a href="#"><i class="me-3 fab fa-twitter fa-lg"></i><a href="#">
-                    <a href="#"><i class="me-3 far fa-envelope fa-lg"></i><a href="#">
+                            <a href="#"><i class="me-3 fab fa-instagram fa-lg"></i><a href="#">
+                                    <a href="#"><i class="me-3 fab fa-twitter fa-lg"></i><a href="#">
+                                            <a href="#"><i class="me-3 far fa-envelope fa-lg"></i><a href="#">
 
                 </div>
             </div>
@@ -92,7 +94,50 @@
 <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        showCloseButton: true,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+    @if (Session::has('success'))
+    Toast.fire({
+        icon: 'success',
+        title: "{{ Session::get('success') }}"
+    });
+    @endif
+    @if (Session::has('warning'))
+    Toast.fire({
+        icon: 'warning',
+        title: "{{ Session::get('warning') }}"
+    });
+    @endif
+</script>
 @livewireScripts
+<script>
+    Livewire.on('success', (msg) => {
+        Toast.fire({
+            icon: 'success',
+            title: msg,
+        })
+    });
+    Livewire.on('error', (msg) => {
+        Toast.fire({
+            icon: 'error',
+            title: msg,
+        })
+    });
+
+</script>
+@stack('scripts')
 
 </body>
 </html>

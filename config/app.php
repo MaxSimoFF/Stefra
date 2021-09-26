@@ -177,6 +177,8 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
 
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class, // This for Cart package
+
     ],
 
     /*
@@ -230,6 +232,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
 
     ],
 

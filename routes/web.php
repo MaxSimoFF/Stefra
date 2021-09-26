@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Http\Livewire\HomeComponent::class)->name('home');
-Route::get('/store', \App\Http\Livewire\ProductComponent::class)->name('store');
+Route::get('/store', \App\Http\Livewire\StoreComponent::class)->name('store');
+Route::get('/store/{slug}', \App\Http\Livewire\CategoryComponent::class)->name('category');
+Route::get('/contact', \App\Http\Livewire\ContactComponent::class)->name('contact');
+Route::get('/cart', \App\Http\Livewire\CartComponent::class)->name('cart');
+Route::get('/profile', \App\Http\Livewire\ProfileComponent::class)->name('profile');
+Route::get('/product/{slug}', \App\Http\Livewire\ProductComponent::class)->name('product');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

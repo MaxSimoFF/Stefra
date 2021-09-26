@@ -24,9 +24,15 @@ class CategoryFactory extends Factory
     {
         $category = $this->faker->unique()->randomElement(['stickOS Drives', 'stickOS-TVPC']);
         $slug = Str::slug($category);
+        if ($category === 'stickOS Drives'){
+            $image = 'assets/images/categories/stickOS Drive-64GB.png';
+        } else {
+            $image = 'assets/images/categories/stickOS - TVPC.png';
+        }
         return [
             'name'  => $category,
             'slug'  => $slug,
+            'image' => $image,
         ];
     }
 }
