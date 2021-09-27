@@ -45,15 +45,42 @@
                                     <li class="nav-item me-5">
                                         <a class="fs-4 nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                                     </li>
-                                    <li class="nav-item me-5">
-                                        <a class="fs-4 nav-link" href="#">Products</a>
-                                    </li>
+                                    {{--                                    <li class="nav-item me-5">--}}
+                                    {{--                                        <a class="fs-4 nav-link" href="#">Products</a>--}}
+                                    {{--                                    </li>--}}
                                     <li class="nav-item me-5">
                                         <a class="fs-4 nav-link" href="{{ route('contact') }}">Contact</a>
                                     </li>
                                     <li class="nav-item me-5">
                                         <a class="fs-4 nav-link" href="{{ route('store') }}">Store</a>
                                     </li>
+                                    @auth
+                                        <li class="nav-item me-3">
+                                            <a class="fs-4 nav-link" href="{{ route('profile') }}">Account</a>
+                                        </li>
+                                        <li class="nav-item text-nowrap">
+                                            <form class="formLogoutUser" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                            </form>
+                                            <a class="fs-4 nav-link" href="javascript:void(0)"
+                                               onclick="document.querySelector('.formLogoutUser').submit()">
+                                                Log out
+                                            </a>
+                                        </li>
+{{--                                        @if()--}}
+                                            <li class="nav-item me-3">
+                                                <a class="fs-4 nav-link" href="{{ route('profile') }}">Account</a>
+                                            </li>
+{{--                                        @endif--}}
+                                    @else
+                                        <li class="nav-item me-5 text-nowrap">
+                                            <a class="fs-4 nav-link d-inline-block"
+                                               href="{{ route('login') }}">Login</a>
+                                            <span style="color: #c04747;">/</span>
+                                            <a class="fs-4 nav-link d-inline-block" href="{{ route('register') }}">Register</a>
+
+                                        </li>
+                                    @endauth
                                 </ul>
                             </div>
                         </div>
