@@ -55,7 +55,7 @@
                                         <a class="fs-4 nav-link" href="{{ route('store') }}">Store</a>
                                     </li>
                                     @auth
-                                        <li class="nav-item me-3">
+                                        <li class="nav-item">
                                             <a class="fs-4 nav-link" href="{{ route('profile') }}">Account</a>
                                         </li>
                                         <li class="nav-item text-nowrap">
@@ -67,11 +67,11 @@
                                                 Log out
                                             </a>
                                         </li>
-{{--                                        @if()--}}
-                                            <li class="nav-item me-3">
-                                                <a class="fs-4 nav-link" href="{{ route('profile') }}">Account</a>
+                                        @if(Auth::user()->is_admin)
+                                            <li class="nav-item">
+                                                <a class="fs-4 nav-link" href="{{ route('admin.dashboard') }}">Panel</a>
                                             </li>
-{{--                                        @endif--}}
+                                        @endif
                                     @else
                                         <li class="nav-item me-5 text-nowrap">
                                             <a class="fs-4 nav-link d-inline-block"

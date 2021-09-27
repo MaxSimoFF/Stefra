@@ -10,12 +10,16 @@ class Admin
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if (\Auth::check()) {
+            if (\Auth::user()->is_admin)
+                return $next($request);
+        }
+        return redirect(route('home'));
     }
 }

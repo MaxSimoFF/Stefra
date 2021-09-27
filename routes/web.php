@@ -21,7 +21,7 @@ Route::get('/cart', \App\Http\Livewire\CartComponent::class)->name('cart');
 Route::get('/profile', \App\Http\Livewire\ProfileComponent::class)->name('profile')->middleware(['auth', 'verified']);
 Route::get('/product/{slug}', \App\Http\Livewire\ProductComponent::class)->name('product');
 
-Route::prefix('backend')->name('admin.')->middleware('admin')->group(function () {
+Route::prefix('backend')->name('admin.')->middleware(['admin'])->group(function () {
     Route::get('/dashboard', \App\Http\Livewire\Admin\Dashboard::class)->name('dashboard');
     Route::get('/category', \App\Http\Livewire\Admin\Category\AdminCategory::class)->name('category');
 });
