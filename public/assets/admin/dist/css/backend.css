@@ -1,0 +1,10 @@
+:root {
+    --my-color-hover: #C9553D; /* #bdc76c */
+}
+
+.card a:not(.btn):hover {
+  color: var(--my-color-hover);
+}
+#swal2-title {
+    color: var(--my-color-hover);
+}
