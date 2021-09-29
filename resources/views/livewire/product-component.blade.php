@@ -1,4 +1,4 @@
-<div>
+<div class="product-page">
     <section class="second-header p-4 mb-3">
         <h3 class="text-center">Welcome to our store</h3>
     </section>
@@ -10,11 +10,11 @@
             </ol>
         </nav>
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-8">
                 <img width='600' src="{{ asset($product->image) }}" alt="item image">
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <h5>{{ $product->name }}</h5>
                 <h6>£{{ $product->price }}</h6>
                 <div>Quantity : <input type="number" value="1" wire:model="qty"></div>

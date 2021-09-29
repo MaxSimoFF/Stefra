@@ -152,8 +152,49 @@ strong, small {
 .products-desc p a {
     color: var(--bs-secondary);
 }
+/* Start Mobile Responsive */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    hr.w-100 {
+        padding: 0;
+    }
+    .form-control {
+        font-size: .9rem;
+    }
     .navbar .navbar-brand img {
         width: 160px;
     }
+    footer.bg-dark {
+        font-size: 10px;
+    }
+    footer.bg-dark img {
+        max-width: 150px;
+    }
+    .main-content .header-navbar .nav-link {
+        font-size: 20px !important;
+    }
+    .nav-item.text-nowrap {
+        white-space: unset !important;
+    }
+    .nav-item.text-nowrap span {
+        display: none;
+    }
+    .cart-count-component > div {
+        width: 33%;
+    }
+    .product-page .col-md-8 img {
+        width: 100%;
+    }
+    .checkout-section {
+        margin-top: 20px;
+    }
+    .may-likes-items > div {
+        width: 50%;
+    }
 }
+
+
+
+/* End Mobile Responsive */

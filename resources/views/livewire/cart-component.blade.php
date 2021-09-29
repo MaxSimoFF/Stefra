@@ -5,7 +5,7 @@
     <div class="container mt-5">
         @if(Cart::instance('cart')->count() > 0)
         <div class="row text-white">
-            <div class="col-4">
+            <div class="col-md-4">
                 <h3 class='text-white'>Shopping Cart</h3>
                 <h6 class='fs-6'>Back to Store</h6>
                 <div class="row">
@@ -13,11 +13,11 @@
                         <div class="col-md-12 cart-items">
                             <div class="card text-white bg-dark mb-2" style="max-width: 400px;height: 90px">
                                 <div class="row g-0">
-                                    <div class="col-md-3">
+                                    <div class="col-3">
                                         <img src="{{ $product->model->image }}" class="img-fluid rounded-start"
                                              alt="item image" width="90" height="90">
                                     </div>
-                                    <div class="col-md-9">
+                                    <div class="col-9">
                                         <div class="card-body">
                                             <a wire:click.prevent="removeFromCart('{{ $product->rowId }}')" class="btn btn-sm btn-outline-danger float-end"><i class="fa fa-times fa-sm"></i></a>
                                             <h5 class="card-title">{{ $product->name }}</h5>
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="col-6 offset-2">
+            <div class="col-md-6 offset-md-2 checkout-section">
                 <h3>CheckOut</h3>
                 <i class="far fa-check-circle fa-2x"></i>
                 <span>Email</span>
@@ -97,7 +97,7 @@
                     <option value="">cairo</option>
                     <option value="">Egypt</option>
                 </select>
-                <input type="submit" aria-label="First name" class="btn btn-outline-secondary mt-2 form-control">
+                <input type="submit" aria-label="First name" class="btn btn-outline-danger mt-2 form-control">
 
 
                 <div class='mt-3'>Next</div>
