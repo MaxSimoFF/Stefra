@@ -39,27 +39,27 @@
             <h3 class='mb-5'>Send Us a Message</h3>
             <div class="row my-3">
                 <label class="col-2 form-label">Name:</label>
-                <div class='col-6'>
+                <div class='col-8'>
                     <input type="text" class="form-control">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-2 form-label">Email:</label>
-                <div class='col-6'>
+                <div class='col-8'>
                     <input type="email" class="form-control" placeholder="name@example.com">
                 </div>
             </div>
             <div class="row mb-3">
                 <label class="col-2 form-label">Phone:</label>
-                <div class='col-6'>
+                <div class='col-8'>
                     <input type="number" class="form-control">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label for="exampleFormControlTextarea1" class="col-2 form-label">Message</label>
-                <div class='col-6'>
+                <div class='col-8'>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>

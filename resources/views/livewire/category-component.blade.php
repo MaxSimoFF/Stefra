@@ -10,9 +10,11 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
                 <div class='products-content'>
                     <img src="{{ asset($product->image) }}" alt="item image">
+                    <p class="product-label">{{ $product->name }}</p>
                     <div class='background-products-desc'>
                         <div class='products-desc'>
-                            <h6 class='mb-md-4'><a href="{{ route('product', $product->slug) }}">{{ $product->name }}</a></h6>
+                            <h6 class='mb-md-4'><a
+                                    href="{{ route('product', $product->slug) }}">{{ $product->name }}</a></h6>
                             <p><a href="{{ route('product', $product->slug) }}">{{ $product->desc }}</a></p>
                             <a href="{{ route('product', $product->slug) }}">Read More
                                 <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
@@ -23,7 +25,9 @@
                                 </svg>
                             </a>
                             <p class="product-price">£{{ $product->price }}</p>
-                            <button wire:click="addToCart({{ $product->id }})" type="button" class="btn btn-sm btn-danger">Add to cart</button>
+                            <button wire:click="addToCart({{ $product->id }})" type="button"
+                                    class="btn btn-sm btn-danger">Add to cart
+                            </button>
                             <span class='span-top'></span>
                             <span class='span-bottom'></span>
                             <span class='span-right'></span>

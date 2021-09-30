@@ -21,33 +21,30 @@
         <!-- nav bar starts here -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container ">
-                <div class="row w-100  p-4">
-                    <div class="col-6 text-center">
+                <div class="row w-100 py-4 px-2">
+                    <div class="col-6">
                         <a class="navbar-brand" href="{{ route('home') }}">
                             <img src="{{ asset('assets/images/Logo.png') }}" alt="">
                         </a>
                     </div>
                     <div class="col-6 m-auto">
-                        <div class='ms-5'>
+                        <div class='ms-5 text-end'>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                     aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <!-- align-middle -->
-                            <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item me-3">
+                                    <li class="nav-item me-sm-3">
                                         <a class="fs-4 nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                                     </li>
-                                    {{--                                    <li class="nav-item me-3">--}}
-                                    {{--                                        <a class="fs-4 nav-link" href="#">Products</a>--}}
-                                    {{--                                    </li>--}}
-                                    <li class="nav-item me-3">
-                                        <a class="fs-4 nav-link" href="{{ route('contact') }}">Contact</a>
-                                    </li>
-                                    <li class="nav-item me-3">
+                                    <li class="nav-item me-sm-3">
                                         <a class="fs-4 nav-link" href="{{ route('store') }}">Store</a>
+                                    </li>
+                                    <li class="nav-item me-sm-3">
+                                        <a class="fs-4 nav-link" href="{{ route('contact') }}">Contact</a>
                                     </li>
                                     @auth
                                         <li class="nav-item">
@@ -68,7 +65,7 @@
                                             </li>
                                         @endif
                                     @else
-                                        <li class="nav-item me-3 text-nowrap">
+                                        <li class="nav-item me-sm-3 text-nowrap">
                                             <a class="fs-4 nav-link d-inline-block"
                                                href="{{ route('login') }}">Login</a>
                                             <span style="color: #c04747;">/</span>
@@ -93,16 +90,16 @@
     <footer class='bg-dark mt-5'>
         <div class='container text-secondary'>
             <div class="row">
-                <div class="col-6 text-center">
-                    <img class="mt-3" width="200" height="35" src="{{ asset('assets/images/Logo.png') }}" alt="">
-                    <p class="mt-3">Copyright © All Rights Reserved.</p>
+                <div class="col-6 text-center text-md-start">
+                    <img class="mt-4" width="200" height="40" src="{{ asset('assets/images/Logo.png') }}" alt="">
+                    <p class="mt-1 text-nowrap">Copyright © All Rights Reserved.</p>
                 </div>
-                <div class="col-6 m-auto text-center">
-                    <a href="#"><i class='me-3 fab fa-facebook-f fa-lg'></i></a>
-                    <a href="#"><i class="me-3 fab fa-youtube fa-lg"></i><a href="#">
-                            <a href="#"><i class="me-3 fab fa-instagram fa-lg"></i><a href="#">
-                                    <a href="#"><i class="me-3 fab fa-twitter fa-lg"></i><a href="#">
-                                            <a href="#"><i class="me-3 far fa-envelope fa-lg"></i><a href="#">
+                <div class="col-6 m-auto text-center text-md-end">
+                    <a href="#"><i class='me-1 me-md-3 fab fa-facebook-f fa-lg'></i></a>
+                    <a href="#"><i class="me-1 me-md-3 fab fa-youtube fa-lg"></i></a>
+                    <a href="#"><i class="me-1 me-md-3 fab fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="me-1 me-md-3 fab fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="me-1 me-md-3 far fa-envelope fa-lg"></i></a>
 
                 </div>
             </div>

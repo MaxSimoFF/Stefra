@@ -8,7 +8,7 @@
                 <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3">
                     <div class="row">
                         @foreach($categories as $category)
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 text-center">
                                 <a href="{{ route('category', $category->slug) }}">
                                     <img width="300" height="300" src="{{ asset($category->image) }}" alt="category">
                                     <p>{{ $category->name }}</p>
