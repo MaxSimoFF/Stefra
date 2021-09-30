@@ -37,7 +37,7 @@ class ProductFactory extends Factory
             'slug'          => $slug,
             'desc'          => $this->faker->text(100),
             'details'       => $details,
-            'image'         => "assets/images/products/$name.png",
+            'image'         => "assets/images/products/$slug.webp",
             'price'         => $this->faker->numberBetween(20, 60),
             'stock_status'  => $this->faker->randomElement(['instock', 'outstock']),
             'quantity'      => $this->faker->numberBetween(12, 30),

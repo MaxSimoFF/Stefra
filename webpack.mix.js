@@ -28,7 +28,13 @@ mix.styles([
         'public/assets/css/bootstrap.min.css',
         'public/assets/css/frontend.css',
     ], 'public/css/front/style.min.css')
-    .styles('public/assets/css/custom.css', 'public/css/front/frontend.min.css');
+    .styles('public/assets/css/custom.css', 'public/css/front/frontend.min.css')
+    .scripts([
+        'public/assets/js/jquery-3.6.0.min.js',
+        'public/assets/js/jquery-ui.min.js',
+        'public/assets/js/bootstrap.min.js',
+        'public/assets/js/sweetalert2.all.min.js',
+    ], 'public/js/front/front.min.js')
 
 if (mix.inProduction()) {
     mix.version();

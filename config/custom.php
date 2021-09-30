@@ -2,7 +2,7 @@
 
 return [
     'default' => [
-        'category' => 'assets/images/default-category.png',
+        'category' => 'assets/images/default-category.webp',
     ],
     'paginate' => [
         'category'  => 5,

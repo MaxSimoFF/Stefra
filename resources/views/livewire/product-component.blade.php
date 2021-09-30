@@ -11,7 +11,7 @@
         </nav>
         <div class="row">
             <div class="col-md-8">
-                <img width='600' src="{{ asset($product->image) }}" alt="item image">
+                <img width='600' height="600" src="{{ asset($product->image) }}" alt="item image">
             </div>
 
             <div class="col-md-4">

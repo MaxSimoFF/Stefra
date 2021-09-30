@@ -27,7 +27,7 @@
                 <div class="row w-100 py-4 px-2">
                     <div class="col-6">
                         <a class="navbar-brand" href="{{ route('home') }}">
-                            <img src="{{ asset('assets/images/Logo.png') }}" alt="">
+                            <img src="{{ asset('assets/images/Logo.webp') }}" alt="">
                         </a>
                     </div>
                     <div class="col-6 m-auto">
@@ -94,7 +94,7 @@
         <div class='container text-secondary'>
             <div class="row">
                 <div class="col-6 text-center text-md-start">
-                    <img class="mt-4" width="200" height="40" src="{{ asset('assets/images/Logo.png') }}" alt="">
+                    <img class="mt-4" width="200" height="40" src="{{ asset('assets/images/Logo.webp') }}" alt="">
                     <p class="mt-1 text-nowrap">Copyright © All Rights Reserved.</p>
                 </div>
                 <div class="col-6 m-auto text-center text-md-end">
@@ -113,11 +113,8 @@
 
 @stack('modals')
 
-<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
-<script>
+<script src="{{ asset('/js/front/front.min.js') }}"></script>
+<script defer>
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -144,7 +141,7 @@
     @endif
 </script>
 @livewireScripts
-<script>
+<script defer>
     Livewire.on('success', (msg) => {
         Toast.fire({
             icon: 'success',

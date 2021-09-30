@@ -4,5 +4,6 @@
     "/css/admin/style.min.css": "/css/admin/style.min.css?id=cfed9a043761f147c79a",
     "/css/admin/backend.min.css": "/css/admin/backend.min.css?id=e85385eddec302d23786",
     "/css/front/style.min.css": "/css/front/style.min.css?id=7c9e21922253bdbb4636",
-    "/css/front/frontend.min.css": "/css/front/frontend.min.css?id=ffbe3cc6cc9becaf0855"
+    "/css/front/frontend.min.css": "/css/front/frontend.min.css?id=ffbe3cc6cc9becaf0855",
+    "/js/front/front.min.js": "/js/front/front.min.js?id=fb31117b3a6d6aa40c90"
 }

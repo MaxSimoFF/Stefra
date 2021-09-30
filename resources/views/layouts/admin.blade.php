@@ -22,7 +22,7 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center bg-dark">
-        <img class="animation__wobble" src="{{ asset('assets/images/Logo.png') }}" alt="AdminLTELogo" height="100"
+        <img class="animation__wobble" src="{{ asset('assets/images/Logo.webp') }}" alt="AdminLTELogo" height="100"
              width="200">
     </div>
 
