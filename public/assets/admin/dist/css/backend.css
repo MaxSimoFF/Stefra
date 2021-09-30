@@ -8,3 +8,8 @@
 #swal2-title {
     color: var(--my-color-hover);
 }
+
+/* for mobile responsive */
+footer.main-footer {
+    font-size: 12px;
+}

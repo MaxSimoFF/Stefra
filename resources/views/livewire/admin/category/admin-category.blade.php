@@ -43,40 +43,43 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover mb-2">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Slug</th>
-                                    <th>Created at</th>
-                                    <th>Actions</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($categories as $category)
+                            <div class="table-responsive">
+                                <table id="example2" class="table table-bordered table-hover mb-2">
+                                    <thead>
                                     <tr>
-                                        <td>{{ $category->id }}</td>
-                                        <td><a target="_blank"
-                                               href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
-                                        </td>
-                                        <td>{{ $category->slug }}</td>
-                                        <td>{{ $category->created_at->format('Y-m-d') }}</td>
-                                        <td>
-                                            <button wire:click="showEdit({{ $category->id }})"
-                                                    class="btn btn-sm btn-outline-info"><i class="fas fa-edit"></i>
-                                            </button>
-                                            {{--                                            <button class="edit-category" data-toggle="modal" data-target="#edit-category">hello</button>--}}
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button wire:click="deleteCategory({{ $category->id }})"
-                                                    class="btn btn-sm btn-outline-danger"><i class="fas fa-times"></i>
-                                            </button>
-                                        </td>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Slug</th>
+                                        <th>Created at</th>
+                                        <th>Actions</th>
                                     </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                            {{ $categories->links() }}
+                                    </thead>
+                                    <tbody>
+                                    @foreach($categories as $category)
+                                        <tr>
+                                            <td>{{ $category->id }}</td>
+                                            <td><a target="_blank"
+                                                   href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
+                                            </td>
+                                            <td>{{ $category->slug }}</td>
+                                            <td>{{ $category->created_at->format('Y-m-d') }}</td>
+                                            <td>
+                                                <div class="row">
+                                                        <button wire:click="showEdit({{ $category->id }})"
+                                                                class="btn btn-sm btn-outline-info"><i class="fas fa-edit"></i>
+                                                        </button>
+                                                    <button wire:click="deleteCategory({{ $category->id }})"
+                                                            class="btn btn-sm btn-outline-danger"><i
+                                                            class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                                {{ $categories->links() }}
+                            </div>
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -94,7 +97,8 @@
             <div class="modal-content bg-secondary">
                 <div class="modal-header">
                     <h4 class="modal-title">Add New Category</h4>
-                    <button wire:click="resetInputFields" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button wire:click="resetInputFields" type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -154,7 +158,9 @@
                     </form>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button wire:click="resetInputFields" type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button wire:click="resetInputFields" type="button" class="btn btn-outline-light"
+                            data-dismiss="modal">Close
+                    </button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -167,7 +173,8 @@
             <div class="modal-content bg-secondary">
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Category</h4>
-                    <button wire:click="resetInputFields" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button wire:click="resetInputFields" type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -226,7 +233,9 @@
                     </form>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button wire:click="resetInputFields" type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button wire:click="resetInputFields" type="button" class="btn btn-outline-light"
+                            data-dismiss="modal">Close
+                    </button>
                 </div>
             </div>
             <!-- /.modal-content -->
