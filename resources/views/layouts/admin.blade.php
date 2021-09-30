@@ -10,15 +10,11 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/admin/style.min.css') }}">
     <!-- My Custom Style -->
-    <link rel="stylesheet" href="{{ asset('/assets/admin/dist/css/backend.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/admin/backend.min.css') }}">
 
+    @stack('styles')
     @livewireStyles
 </head>
 <body class="layout-navbar-fixed dark-mode @yield('body-class')">
@@ -110,6 +106,7 @@
     });
     window.livewire.on('closeModal', () => {
         $(".modal").modal('hide');
+        $('.modal-backdrop.fade.show').remove();
     });
 
 </script>

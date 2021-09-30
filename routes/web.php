@@ -24,6 +24,7 @@ Route::get('/product/{slug}', \App\Http\Livewire\ProductComponent::class)->name(
 Route::prefix('backend')->name('admin.')->middleware(['admin'])->group(function () {
     Route::get('/dashboard', \App\Http\Livewire\Admin\Dashboard::class)->name('dashboard');
     Route::get('/category', \App\Http\Livewire\Admin\Category\AdminCategory::class)->name('category');
+    Route::get('/product', \App\Http\Livewire\Admin\Product\AdminProduct::class)->name('product');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

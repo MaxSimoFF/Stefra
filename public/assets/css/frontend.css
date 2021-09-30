@@ -40,7 +40,7 @@ a:hover {
 .header-img {
     position: relative;
     height: 500px;
-    background-image: url("../images/bg-head.webp");
+    background-image: url("/assets/images/bg-head.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;

@@ -1,4 +1,8 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=fc278c109ab641abfc46",
+    "/css/app.css": "/css/app.css?id=3db08ca9a6375b365084",
+    "/css/admin/style.min.css": "/css/admin/style.min.css?id=cfed9a043761f147c79a",
+    "/css/admin/backend.min.css": "/css/admin/backend.min.css?id=e85385eddec302d23786",
+    "/css/front/style.min.css": "/css/front/style.min.css?id=7c9e21922253bdbb4636",
+    "/css/front/frontend.min.css": "/css/front/frontend.min.css?id=12a89448b780a30ccd55"
 }

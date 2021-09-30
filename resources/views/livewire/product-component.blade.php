@@ -22,7 +22,8 @@
                     <button wire:click="addToCart" type="button" class='btn btn-outline-danger form-control w-75 mt-3'>
                         Add More
                     </button>
-                    <a href="{{ route('cart') }}" wire:click="addToCart" class='btn btn-outline-danger form-control w-75 mt-2'>
+                    <a href="{{ route('cart') }}" wire:click="addToCart"
+                       class='btn btn-outline-danger form-control w-75 mt-2'>
                         Go to Checkout
                     </a>
                 @else
@@ -36,22 +37,7 @@
                 <p class='info-small'>{!! $product->desc !!}</p>
 
                 <h5 class='mt-5'>Details</h5>
-                {{--            {!! $product->details !!}--}}
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> Intel Atom z8350 Quad-Core CPU</i>
-                </div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> 8GB RAM</i></div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> Intel HD Graphic</i></div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> 128GB Storage</i></div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> 2.4GHz/5GHz Dual-Band
-                        Wifi+Bluetooth</i>
-                </div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> USB 3.0 - USB 2.0 - MicroSD Slot</i>
-                </div>
-                <div><i class="mt-2 info-small text-secondary far fa-dot-circle"> stickOS System: Easy to use system
-                        with
-                        user friendly interface</i></div>
-
-
+                <div class="product-details-content">{!! $product->details !!}</div>
                 <div class="mt-3 brown">Share this product with your friends</div>
 
                 <a class='' href="#"><i class="fab fa-facebook"> Share</i></a>

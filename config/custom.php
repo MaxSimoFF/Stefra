@@ -5,6 +5,7 @@ return [
         'category' => 'assets/images/default-category.png',
     ],
     'paginate' => [
-        'category' => 5
+        'category'  => 5,
+        'product'   => 10,
     ]
 ];

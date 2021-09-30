@@ -45,10 +45,14 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.category') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Categories
-                        </p>
+                        <i class="nav-icon fas fa-list-alt"></i>
+                        <p>Categories</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.product') }}" class="nav-link">
+                        <i class="nav-icon fab fa-product-hunt"></i>
+                        <p>Products</p>
                     </a>
                 </li>
 

@@ -9,14 +9,9 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="{{ asset('/css/front/style.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/front/frontend.min.css') }}">
 
-    <!-- Styles -->
-    {{--        <link rel="stylesheet" href="{{ mix('css/app.css') }}">--}}
-    <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/frontend.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     @livewireStyles
 </head>
 <body>

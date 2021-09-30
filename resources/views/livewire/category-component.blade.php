@@ -7,7 +7,7 @@
     </nav>
     <div class="row justify-content-center">
         @foreach($category->products as $product)
-            <div class="col-md-3 mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
                 <div class='products-content'>
                     <img src="{{ asset($product->image) }}" alt="item image">
                     <div class='background-products-desc'>

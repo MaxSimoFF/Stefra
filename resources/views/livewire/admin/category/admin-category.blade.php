@@ -50,7 +50,7 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Slug</th>
-                                        <th>Created at</th>
+                                        <th class="text-nowrap">Created at</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -64,7 +64,7 @@
                                             <td>{{ $category->slug }}</td>
                                             <td>{{ $category->created_at->format('Y-m-d') }}</td>
                                             <td>
-                                                <div class="row">
+                                                <div class="row justify-content-center">
                                                         <button wire:click="showEdit({{ $category->id }})"
                                                                 class="btn btn-sm btn-outline-info"><i class="fas fa-edit"></i>
                                                         </button>

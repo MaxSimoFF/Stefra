@@ -7,6 +7,7 @@ body {
     color: var(--my-a-color);
     position: relative;
 }
+
 .header-navbar .navbar-dark .navbar-nav .nav-link:hover {
     color: var(--my-color-hover);
     transition-duration: .3s;
@@ -82,15 +83,18 @@ footer a:hover {
 
 /* Start Store Page */
 section.second-header {
-    background-color: rgba(102,102,102,1);
+    background-color: rgba(102, 102, 102, 1);
 }
+
 section.second-header h3 {
     color: var(--my-a-color);
 }
+
 .breadcrumb-item a:hover {
     color: var(--my-color-hover);
     transition-duration: .3s;
 }
+
 .category-store a {
     position: relative;
     transition: color .3s;
@@ -131,14 +135,17 @@ section.second-header h3 {
     color: var(--my-color-hover);
     transition-duration: .3s;
 }
+
 .cart-count-component a:hover {
     color: var(--my-color-hover);
     transition-duration: .3s;
 }
+
 .cart-items select[name=product-qty] {
     background-color: var(--my-color-hover);
     color: var(--my-a-color);
 }
+
 strong, small {
     color: var(--my-a-color);
 }
@@ -146,55 +153,74 @@ strong, small {
 .continue-shopping {
     color: var(--my-color-hover);
 }
+
 .continue-shopping:hover {
     color: var(--bs-warning);
 }
+
 .products-desc p a {
     color: var(--bs-secondary);
 }
+
 /* Start Mobile Responsive */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
     }
+
     hr.w-100 {
         padding: 0;
     }
+
     .form-control {
         font-size: .9rem;
     }
+
     .navbar .navbar-brand img {
         width: 160px;
     }
+
     footer.bg-dark {
         font-size: 10px;
     }
+
     footer.bg-dark img {
         max-width: 150px;
     }
+
     .main-content .header-navbar .nav-link {
         font-size: 20px !important;
     }
+
     .nav-item.text-nowrap {
         white-space: unset !important;
     }
+
     .nav-item.text-nowrap span {
         display: none;
     }
+
     .cart-count-component > div {
         width: 33%;
     }
+
     .product-page .col-md-8 img {
         width: 100%;
     }
+
     .checkout-section {
         margin-top: 20px;
     }
+
     .may-likes-items > div {
         width: 50%;
     }
 }
 
-
+@media (max-width: 900px) {
+    .map-frame {
+        width: 100%;
+    }
+}
 
 /* End Mobile Responsive */

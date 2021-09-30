@@ -5,7 +5,7 @@
     <div class="container mt-5">
         @if(Cart::instance('cart')->count() > 0)
         <div class="row text-white">
-            <div class="col-md-4">
+            <div class="col-sm-6 col-lg-4">
                 <h3 class='text-white'>Shopping Cart</h3>
                 <h6 class='fs-6'>Back to Store</h6>
                 <div class="row">
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 offset-md-2 checkout-section">
+            <div class="col-sm-6 offset-lg-2 checkout-section">
                 <h3>CheckOut</h3>
                 <i class="far fa-check-circle fa-2x"></i>
                 <span>Email</span>
