@@ -77,7 +77,7 @@
                                 </div>
                                 @error('message') <span class="text-danger offset-2">{{ $message }}</span> @enderror
                             </div>
-                            <button class="btn btn-lg btn-outline-secondary col-8 col-sm-10 offset-2" type="submit">Submit</button>
+                            <button class="btn btn-lg btn-outline-stefra col-8 col-sm-10 offset-2" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

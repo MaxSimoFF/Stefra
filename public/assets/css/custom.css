@@ -3,6 +3,22 @@ body {
     background: #040404;
     font-family: 'Ubuntu Condensed', sans-serif;
 }
+main {
+    color: rgb(61,61,61);
+    font-size: 18px;
+}
+.btn-outline-stefra {
+    color: rgb(210 66 36);
+    border-color: rgba(202,85,61,0.5);
+}
+.btn-outline-stefra:hover {
+    color: #fff;
+    background-color: rgba(202,85,61,0.5);
+    border-color: rgba(202,85,61,0.5);
+}
+.text-16 {
+    font-size: 16px;
+}
 
 /* Start Navbar */
 .header-navbar .navbar-dark .navbar-nav .nav-link {
@@ -90,6 +106,7 @@ section.second-header {
 
 section.second-header h3 {
     color: var(--my-a-color);
+    font-size: 3rem;
 }
 
 .breadcrumb-item a:hover {
@@ -176,6 +193,10 @@ strong, small {
     margin: 0;
     border-radius: 10px;
 }
+
+/* Start Login page */
+
+/* End Login page */
 
 /* Start Mobile Responsive */
 @media (max-width: 768px) {

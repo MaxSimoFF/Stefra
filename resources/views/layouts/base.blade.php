@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} {{ isset($title) ? '- ' : '' }} {{  $title ?? '' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="{{ asset('/css/front/style.min.css') }}">
     <link rel="stylesheet" href="{{ mix('/css/front/frontend.min.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('/assets/css/toastr.min.css') }}">
     @livewireStyles
 </head>
 <body>
@@ -114,8 +114,19 @@
 @stack('modals')
 
 <script src="{{ asset('/js/front/front.min.js') }}"></script>
+<script src="{{ asset('/assets/js/toastr.min.js') }}"></script>
 <script defer>
-    const Toast = Swal.mixin({
+    toastr.options = { // For toastr plugin
+        'closeButton': true,
+        'preventDuplicates': false,
+        'showMethod': 'slideDown',
+        'hideMethod': 'slideUp',
+        'closeMethod': 'slideUp',
+        'progressBar': false,
+        "positionClass": "toast-top-right", // toast-top-full-width
+    };
+
+    const Toast = Swal.mixin({ // for sweetAlert2 plugin
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
@@ -128,33 +139,43 @@
         }
     })
     @if (Session::has('success'))
-    Toast.fire({
-        icon: 'success',
-        title: "{{ Session::get('success') }}"
-    });
+    {{--Toast.fire({--}}
+    {{--    icon: 'success',--}}
+    {{--    title: "{{ Session::get('success') }}"--}}
+    {{--});--}}
+        toastr.success("{{ Session::get('success') }}")
     @endif
     @if (Session::has('warning'))
-    Toast.fire({
-        icon: 'warning',
-        title: "{{ Session::get('warning') }}"
-    });
+    {{--Toast.fire({--}}
+    {{--    icon: 'warning',--}}
+    {{--    title: "{{ Session::get('warning') }}"--}}
+    {{--});--}}
+        toastr.warning("{{ Session::get('warning') }}")
     @endif
 </script>
 @livewireScripts
 <script defer>
     Livewire.on('success', (msg) => {
-        Toast.fire({
-            icon: 'success',
-            title: msg,
-        })
+        // Toast.fire({
+        //     icon: 'success',
+        //     title: msg,
+        // })
+        toastr.success(msg)
     });
     Livewire.on('error', (msg) => {
-        Toast.fire({
-            icon: 'error',
-            title: msg,
-        })
+        // Toast.fire({
+        //     icon: 'error',
+        //     title: msg,
+        // })
+        toastr.error(msg)
     });
-
+    Livewire.on('warning', (msg) => {
+        // Toast.fire({
+        //     icon: 'warning',
+        //     title: msg,
+        // })
+        toastr.warning(msg)
+    });
 </script>
 @stack('scripts')
 

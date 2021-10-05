@@ -19,15 +19,15 @@
                 <h6>£{{ $product->price }}</h6>
                 <div>Quantity : <input type="number" value="1" wire:model="qty"></div>
                 @if(in_array($product->id, Cart::instance('cart')->content()->pluck('id')->toArray()))
-                    <button wire:click="addToCart" type="button" class='btn btn-outline-danger form-control w-75 mt-3'>
+                    <button wire:click="addToCart" type="button" class='btn btn-outline-stefra form-control w-75 mt-3'>
                         Add More
                     </button>
-                    <a href="{{ route('cart') }}" wire:click="addToCart"
-                       class='btn btn-outline-danger form-control w-75 mt-2'>
+                    <a href="{{ route('cart') }}"
+                       class='btn btn-outline-stefra form-control w-75 mt-2'>
                         Go to Checkout
                     </a>
                 @else
-                    <button wire:click="addToCart" type="button" class='btn btn-outline-danger form-control w-75 mt-3'>
+                    <button wire:click="addToCart" type="button" class='btn btn-outline-stefra form-control w-75 mt-3'>
                         Add to Bag
                     </button>
                 @endif

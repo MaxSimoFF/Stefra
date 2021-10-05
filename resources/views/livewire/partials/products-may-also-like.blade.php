@@ -1,6 +1,6 @@
 <div class="row">
     <h3 class='text-secondary mb-5'>You May Also Like</h3>
-    <div class="col-10">
+    <div class="col-10 m-auto">
         <div class="row text-center may-likes-items">
             @foreach($mayLikesItems as $item)
                 @if($products)
